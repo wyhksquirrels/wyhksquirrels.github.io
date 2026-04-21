@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos & News | WYSPWT Squirrel Protection</title>
+    <link rel="icon" href="assets/icon2.png">
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#fcfaf7] text-slate-800 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2 group cursor-pointer">
+                <div class="w-10 h-10 bg-green-800 rounded-xl flex items-center justify-center text-white transform group-hover:rotate-12 transition-transform shadow-lg">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <span class="text-2xl font-bold text-green-800 tracking-tighter">WYSPWT</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-widest text-slate-600">
+                <!-- Added Knowledge Link here -->
+                <a href="index.html" class="nav-link relative hover:text-green-700 transition py-2">Home</a>
+                <a href="knowledge.html" class="nav-link relative hover:text-green-700 transition py-2">Information</a>
+                <a href="squirrelgo.html" class="nav-link relative hover:text-green-700 transition py-2">Squirrel Go</a>
+                <a href="stcg.html" class="nav-link relative hover:text-green-700 transition py-2">STCG</a>
+                <a href="news.html" class="nav-link relative hover:text-green-700 transition py-2">Photos & News</a>
+            </div>
+
+            <button class="md:hidden text-2xl hover:text-green-700" id="menuBtn">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="h-screen flex items-center justify-center news-hero text-white text-center px-4 relative overflow-hidden">
+
+        <div class="max-w-4xl space-y-6 relative z-10 mt-16">
+            <h1 class="text-5xl md:text-8xl font-bold leading-tight animate-fade-in" style="animation-delay: 0.2s;">
+                Photos &   
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500 filter drop-shadow-lg">News</span>
+            </h1>
+            <p class="text-xl md:text-2xl font-light opacity-90 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.4s;">
+                Documenting our little neighbors in Hong Kong and tracking conservation efforts across the region.
+            </p>
+            <div class="pt-10 animate-fade-in" style="animation-delay: 0.6s;">
+                <a href="#gallery" class="shine-effect relative overflow-hidden bg-white text-green-900 px-10 py-5 rounded-full font-bold shadow-[0_10px_40px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_50px_rgba(255,255,255,0.3)] hover:-translate-y-2 transition-all duration-300 inline-block text-lg">
+                    <span class="relative z-10 flex items-center space-x-2">
+                        <span>Find out more</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-2 opacity-70 hover:opacity-100 transition cursor-pointer" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+            <span class="text-xs uppercase tracking-widest font-bold">Scroll Down</span>
+            <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center p-1">
+                <div class="w-1.5 h-3 bg-white rounded-full animate-scroll-bounce"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery & Campus Sightings -->
+    <section id="gallery" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Campus Spotlight -->
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-32 reveal">
+                <div class="relative group">
+                    <div class="absolute -inset-4 bg-green-100 rounded-[2.5rem] -rotate-2 group-hover:rotate-0 transition-transform duration-500"></div>
+                    <img src="assets/news1.png" alt="Campus Squirrel" class="relative rounded-3xl shadow-2xl z-10 w-full object-cover h-[450px]">
+                    <div class="absolute bottom-8 left-8 z-20 bg-white/90 backdrop-blur px-6 py-3 rounded-2xl shadow-xl border border-white/50">
+                        <p class="text-xs font-bold text-green-800 uppercase tracking-widest">Campus Sighting</p>
+                        <p class="text-slate-600 text-sm">Near Gordon Wu Hall • Nov 2025</p>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="w-16 h-1 bg-green-600 rounded-full"></div>
+                    <h2 class="text-4xl font-black text-slate-900 leading-tight">Squirrel in Our Campus! 🏫</h2>
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        That's a <strong>Pallas's squirrel</strong> spotted right from our classroom window! It is the most popular squirrel species found in Wah Yan and throughout Hong Kong. These agile climbers have adapted perfectly to our urban-greenery balance.
+                    </p>
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-xl">
+                        <p class="text-yellow-800 font-medium italic">"The cuter an animal is, the more it tends to be traded. Fortunately, Pallas's Squirrel has integrated into our ecosystem without causing major disruptions so far."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Grid -->
+            <div class="text-center mb-16 reveal">
+                <h3 class="text-3xl font-bold text-slate-900">Global & Local News</h3>
+                <p class="text-slate-500 mt-2">Latest headlines in squirrel conservation and wildlife protection.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- News Item 1: Real News -->
+                <div class="news-card bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm flex flex-col reveal" style="transition-delay: 100ms;">
+                    <div class="h-56 overflow-hidden">
+                        <img src="assets/news2.png" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-3">Rescue Story 🐿️</span>
+                        <h4 class="text-xl font-bold mb-4 text-slate-900 group-hover:text-green-700">Cute Baby Squirrel Rescued by SPCA</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-1">
+                            A baby Pallas's squirrel was rescued in Wan Chai and passed to the Wild Animal Rescue Centre at Kadoorie Farm for rehabilitation.
+                        </p>
+                        <a href="https://www.kfbg.org/en/KFBG-blog/post/Raising-a-baby-Pallass-Squirrel" target="_blank" class="text-green-700 font-bold text-sm flex items-center group">
+                            Read Full Story <i class="fa-solid fa-arrow-up-right-from-square ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Item 2: Biodiversity -->
+                <div class="news-card bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm flex flex-col reveal" style="transition-delay: 200ms;">
+                    <div class="h-56 overflow-hidden">
+                        <img src="assets/news3.png" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <span class="text-xs font-bold text-orange-600 uppercase tracking-widest mb-3">Eco-Spotlight 🔎</span>
+                        <h4 class="text-xl font-bold mb-4 text-slate-900">Distinctive Black Dots: The Styani Subspecies</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-1">
+                            Did you know the Pallas's squirrel subspecies in HK has a distinctive black dot on its tail? Learn how to identify them in the wild.
+                        </p>
+                        <a href="https://www.greenpower.org.hk/eng-hong-kongs-wild-stars/rodent-on-the-trees-pallass-squirrel" target="_blank" class="text-green-700 font-bold text-sm flex items-center group">
+                            Learn More <i class="fa-solid fa-arrow-up-right-from-square ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Item 3: Policy -->
+                <div class="news-card bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm flex flex-col reveal" style="transition-delay: 300ms;">
+                    <div class="h-56 overflow-hidden">
+                        <img src="assets/news4.png" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <span class="text-xs font-bold text-purple-600 uppercase tracking-widest mb-3">Regulation 📜</span>
+                        <h4 class="text-xl font-bold mb-4 text-slate-900">Stop the Illegal Trade: New AFCD Guidelines</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-1">
+                            Protecting our ecosystem means stopping the release of exotic species. AFCD provides new resources for urban wildlife co-existence.
+                        </p>
+                        <a href="https://www.afcd.gov.hk/english/aboutus/abt_adv/files/WP_CMPB_5_2025_Annex_en.pdf" target="_blank" class="text-green-700 font-bold text-sm flex items-center group">
+                            Official Guidelines <i class="fa-solid fa-arrow-up-right-from-square ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Submission CTA -->
+    <section class="py-24 px-6 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 40px 40px;"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10 space-y-8 reveal">
+            <i class="fa-solid fa-camera-retro text-6xl text-green-400 mb-4"></i>
+            <h2 class="text-4xl md:text-5xl font-black">Spotted a squirrel? <br><span class="text-green-400">Share your photo!</span></h2>
+            <p class="text-slate-400 text-lg">Help us build the most comprehensive database of Wah Yan squirrel activity. Every photo helps our conservation research.</p>
+            <div class="pt-6">
+                <a href="mailto:s24253@wahyan.edu.hk" class="inline-flex items-center space-x-3 bg-white text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-green-400 hover:scale-105 transition-all">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Email Your Photo</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-16 px-6 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 items-center">
+            <div class="space-y-4">
+                <div class="flex items-center space-x-2 text-white group cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-8 h-8 bg-green-800 rounded-lg flex items-center justify-center">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <span class="text-xl font-bold tracking-tighter">WYSPWT</span>
+                </div>
+                <p class="text-sm text-slate-500">Wah Yan Squirrel Protection Work Team <br> Harmonizing nature and education.</p>
+            </div>
+            
+            <div class="text-center md:text-left">
+                <p class="font-bold text-white mb-4 uppercase tracking-widest text-xs">Contact Lead</p>
+                <a href="mailto:s24253@wahyan.edu.hk" class="inline-flex items-center space-x-2 hover:text-white transition group">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>s24253@wahyan.edu.hk (Marcus Ho)</span>
+                </a>
+            </div>
+
+            <div class="flex justify-start md:justify-end space-x-4">
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-green-800 hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-green-800 hover:text-white transition"><i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-800 text-sm flex flex-col md:flex-row justify-between items-center">
+            <p>&copy; 2026 Wah Yan College, Hong Kong. F.3K GP1.</p>
+            <p class="mt-2 md:mt-0 opacity-50 font-mono text-xs">v5.1.NEWS</p>
+        </div>
+    </footer>
+
+    <!-- Animations Script -->
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+        const scrollHandler = () => {
+            reveals.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.9) {
+                    el.classList.add('active');
+                }
+            });
+        };
+        window.addEventListener('scroll', scrollHandler);
+        window.onload = scrollHandler;
+    </script>
+</body>
+</html>

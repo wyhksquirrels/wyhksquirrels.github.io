@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap');
+
+:root {
+    --primary: #2d5a27;
+    --accent: #d4a373;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Glassmorphism Navigation */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-nav.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Navigation Links underline effect */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--primary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero Background Parallax - Index */
+.hero-gradient {
+    background: linear-gradient(rgba(15, 33, 13, 0.6), rgba(0, 0, 0, 0.5)), url('../assets/thumbnail.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Hero Background Parallax - Knowledge Page */
+.knowledge-hero {
+    background: linear-gradient(to bottom, rgba(15, 30, 15, 0.8), rgba(10, 20, 10, 0.5)), url('../assets/knowledge-thumbnail.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    background-attachment: fixed;
+}
+
+.game-hero {
+    background: linear-gradient(to bottom, rgba(20, 30, 40, 0.8), rgba(10, 15, 20, 0.6)), url('../assets/squirrelgo-thumbnail.jpg');
+    background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+/* Specific STCG Hero Background to match Squirrel Go style */
+.stcg-hero {
+    background: linear-gradient(to bottom, rgba(20, 40, 20, 0.7), rgba(15, 25, 15, 0.5)), url('../assets/stcg-thumbnail.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.news-hero {
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.6)), url('https://images.unsplash.com/photo-1504006833117-8886a355efbf?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+.glass-nav {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.news-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* 3D Trading Card Styles */
+.card-container {
+    perspective: 1200px;
+}
+.trading-card {
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.6s ease;
+    will-change: transform, box-shadow;
+    transform: translateZ(0); 
+    backface-visibility: hidden;
+}
+.card-container:hover .trading-card {
+    transform: rotateY(12deg) rotateX(6deg) translateY(-15px);
+    box-shadow: -30px 30px 50px -15px rgba(0, 0, 0, 0.4), 0 0 30px rgba(234, 179, 8, 0.3);
+}
+
+/* Fixed Holographic Overlay (No Black Lines) */
+.holo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, 
+        rgba(255, 255, 255, 0) 15%, 
+        rgba(255, 255, 255, 0.3) 25%, 
+        rgba(255, 255, 255, 0.5) 30%, 
+        rgba(255, 255, 255, 0) 35%, 
+        rgba(255, 255, 255, 0) 45%, 
+        rgba(255, 255, 255, 0.3) 50%, 
+        rgba(255, 255, 255, 0) 55%
+    );
+    background-size: 250% 250%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 20;
+    border-radius: 1.5rem;
+}
+.card-container:hover .holo-overlay {
+    opacity: 1;
+    animation: holo-shine 4s infinite linear;
+}
+@keyframes holo-shine {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Shine Effect for Buttons (Matching Squirrel Go) */
+.shine-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
+    transform: skewX(-25deg);
+    transition: 0.75s;
+    z-index: 1;
+}
+.shine-effect:hover::before {
+    left: 125%;
+}
+
+/* Abstract Phone Mockup Animation */
+@keyframes float-phone {
+    0%, 100% { transform: translateY(0px) rotate(-2deg); }
+    50% { transform: translateY(-20px) rotate(2deg); }
+}
+.animate-float-phone {
+    animation: float-phone 6s ease-in-out infinite;
+}
+
+/* Base Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Keyframe Animations */
+.animate-fade-in {
+    animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scrollBounce {
+    0%, 100% { transform: translateY(0); opacity: 1;}
+    50% { transform: translateY(10px); opacity: 0.5;}
+}
+.animate-scroll-bounce {
+    animation: scrollBounce 2s infinite ease-in-out;
+}
+
+@keyframes floatSlow {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(2deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+.animate-float-slow {
+    animation: floatSlow 6s ease-in-out infinite;
+}
+
+@keyframes floatFast {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(-3deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+.animate-float-fast {
+    animation: floatFast 4s ease-in-out infinite;
+}
+
+/* Playful Animations for Knowledge Page */
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-5deg) scale(1.1); }
+    50% { transform: rotate(5deg) scale(1.1); }
+}
+@keyframes float-leaf {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+}
+.animate-float-leaf { animation: float-leaf 6s ease-in-out infinite; }
+
+.fact-card:hover .fact-icon {
+    animation: wiggle 0.5s ease-in-out infinite;
+}
+
+/* Fact Card Hover Magic - Bento Style */
+.fact-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-bottom: 4px solid transparent;
+}
+.fact-card:hover {
+    transform: translateY(-8px);
+    border-bottom: 4px solid #16a34a; 
+    box-shadow: 0 20px 40px -15px rgba(22, 163, 74, 0.2);
+}
+
+.fact-icon-wrapper {
+    transition: all 0.4s ease;
+}
+.fact-card:hover .fact-icon-wrapper {
+    background-color: #16a34a;
+    color: white;
+    box-shadow: 0 10px 20px -5px rgba(22, 163, 74, 0.4);
+}
+
+/* Accordion Transitions - Timeline Style */
+.accordion-item {
+    transition: all 0.3s ease;
+}
+.accordion-item.active-item {
+    border-color: #86efac; 
+    box-shadow: 0 10px 30px -10px rgba(34, 197, 94, 0.2);
+    transform: scale(1.02);
+}
+.accordion-content {
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+.accordion-content.open {
+    max-height: 300px;
+    opacity: 1;
+}
+.accordion-icon {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.accordion-button.active .accordion-icon {
+    transform: rotate(180deg);
+    color: #16a34a;
+}
+.accordion-button.active .num-circle {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    box-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
+}
+
+/* Highlighting inside text */
+.highlight { 
+    color: #15803d; 
+    font-weight: 600; 
+}
+
+/* Shine Effect on Buttons */
+.shine-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+    transition: all 0.7s ease;
+    z-index: 1;
+}
+.shine-effect:hover::before {
+    left: 200%;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #fcfaf7; }
+::-webkit-scrollbar-thumb { 
+    background: var(--primary); 
+    border-radius: 10px; 
+    border: 3px solid #fcfaf7;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #1e3f1a;
+}

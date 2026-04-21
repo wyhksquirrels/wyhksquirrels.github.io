@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge of Squirrels | WYSPWT</title>
+    <link rel="icon" href="assets/icon2.png">
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="text-slate-800 bg-[#fcfaf7] overflow-x-hidden">
+
+    <!-- Scroll Progress Bar -->
+    <div id="progressBar" class="fixed top-0 left-0 h-1 bg-green-500 z-[100] w-0 shadow-[0_0_10px_rgba(34,197,94,0.8)] transition-all duration-150"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Updated the div to an "a" tag so clicking the logo goes home -->
+            <a href="index.html" class="flex items-center space-x-2 group cursor-pointer">
+                <div class="w-10 h-10 bg-green-800 rounded-xl flex items-center justify-center text-white transform group-hover:rotate-12 transition-transform shadow-lg">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <span class="text-2xl font-bold text-green-800 tracking-tighter">WYSPWT</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-widest text-slate-600">
+                <!-- Added Knowledge Link here -->
+                <a href="index.html" class="nav-link relative hover:text-green-700 transition py-2">Home</a>
+                <a href="knowledge.html" class="nav-link relative hover:text-green-700 transition py-2">Information</a>
+                <a href="squirrelgo.html" class="nav-link relative hover:text-green-700 transition py-2">Squirrel Go</a>
+                <a href="stcg.html" class="nav-link relative hover:text-green-700 transition py-2">STCG</a>
+                <a href="news.html" class="nav-link relative hover:text-green-700 transition py-2">Photos & News</a>
+            </div>
+
+            <button class="md:hidden text-2xl hover:text-green-700 transition transform hover:scale-110" id="menuBtn">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="h-screen flex items-center justify-center knowledge-hero text-white text-center px-4 relative overflow-hidden">
+
+        <div class="max-w-4xl space-y-6 relative z-10 mt-16">
+            <h1 class="text-5xl md:text-8xl font-bold leading-tight animate-fade-in" style="animation-delay: 0.2s;">
+                Learn More About<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500 filter drop-shadow-lg">Squirrel</span>
+            </h1>
+            <p class="text-xl md:text-2xl font-light opacity-90 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.4s;">
+                Discover their daily habits, impressive survival skills, and how you can help protect them.
+            </p>
+            <div class="pt-10 animate-fade-in" style="animation-delay: 0.6s;">
+                <a href="#facts" class="shine-effect relative overflow-hidden bg-white text-green-900 px-10 py-5 rounded-full font-bold shadow-[0_10px_40px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_50px_rgba(255,255,255,0.3)] hover:-translate-y-2 transition-all duration-300 inline-block text-lg">
+                    <span class="relative z-10 flex items-center space-x-2">
+                        <span>Learn More</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-2 opacity-70 hover:opacity-100 transition cursor-pointer" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+            <span class="text-xs uppercase tracking-widest font-bold">Scroll Down</span>
+            <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center p-1">
+                <div class="w-1.5 h-3 bg-white rounded-full animate-scroll-bounce"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fascinating Facts Grid -->
+    <section id="facts" class="py-24 px-6 bg-[#fcfaf7]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <span class="text-green-600 font-bold tracking-widest uppercase text-sm mb-2 block">Biology & Behavior</span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-slate-900">Fascinating Facts 🌰</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-green-500 to-green-800 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Fact 1 -->
+                <div class="fact-card bg-white p-8 rounded-3xl border border-slate-100 shadow-sm reveal relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition text-6xl">🌍</div>
+                    <div class="fact-icon-wrapper w-16 h-16 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                        <i class="fact-icon fa-solid fa-paw"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">What Are They?</h3>
+                    <p class="text-slate-600 leading-relaxed">Small, little mammals with iconic bushy tails. They are incredibly <span class="highlight">adaptable</span> and live on almost every continent.</p>
+                </div>
+
+                <!-- Fact 2 -->
+                <div class="fact-card bg-white p-8 rounded-3xl border border-slate-100 shadow-sm reveal relative overflow-hidden group" style="transition-delay: 100ms;">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition text-6xl">🏡</div>
+                    <div class="fact-icon-wrapper w-16 h-16 bg-orange-50 text-orange-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                        <i class="fact-icon fa-solid fa-tree"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Where Do They Live?</h3>
+                    <p class="text-slate-600 leading-relaxed">They thrive in trees and parks. They build leafy, spherical nests called <span class="highlight">"dreys"</span> out of twigs, high up in the branches.</p>
+                </div>
+
+                <!-- Fact 3 -->
+                <div class="fact-card bg-white p-8 rounded-3xl border border-slate-100 shadow-sm reveal relative overflow-hidden group" style="transition-delay: 200ms;">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition text-6xl">🥜</div>
+                    <div class="fact-icon-wrapper w-16 h-16 bg-yellow-50 text-yellow-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                        <i class="fact-icon fa-solid fa-cookie-bite"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">What Do They Eat?</h3>
+                    <p class="text-slate-600 leading-relaxed">As <span class="highlight">omnivores</span>, they love seeds, nuts, and fruit, but also eat insects. They famously hoard food for the winter months.</p>
+                </div>
+
+                <!-- Fact 4 -->
+                <div class="fact-card bg-white p-8 rounded-3xl border border-slate-100 shadow-sm reveal relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition text-6xl">👃</div>
+                    <div class="fact-icon-wrapper w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                        <i class="fact-icon fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Super Senses</h3>
+                    <p class="text-slate-600 leading-relaxed">They have an incredible sense of smell, finding food buried deep under snow. Fun fact: Sometimes they <span class="highlight">forget</span> where they hid it!</p>
+                </div>
+
+                <!-- Fact 5 -->
+                <div class="fact-card bg-white p-8 rounded-3xl border border-slate-100 shadow-sm reveal relative overflow-hidden group" style="transition-delay: 100ms;">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition text-6xl">☀️</div>
+                    <div class="fact-icon-wrapper w-16 h-16 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                        <i class="fact-icon fa-solid fa-sun"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Daily Routine</h3>
+                    <p class="text-slate-600 leading-relaxed">Highly active during the day (<span class="highlight">diurnal</span>). Their routine is foraging, playing, chasing, and rigorous grooming to stay clean.</p>
+                </div>
+
+                <!-- Fact 6 -->
+                <div class="fact-card bg-white p-8 rounded-3xl border border-slate-100 shadow-sm reveal relative overflow-hidden group" style="transition-delay: 200ms;">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition text-6xl">🗣️</div>
+                    <div class="fact-icon-wrapper w-16 h-16 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                        <i class="fact-icon fa-solid fa-bullhorn"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Communication</h3>
+                    <p class="text-slate-600 leading-relaxed">They vocalize by chattering and barking. They use visual cues like <span class="highlight">twitching tails</span>, and use scent to mark territory.</p>
+                </div>
+
+                <!-- Fact 7 -->
+                <div class="fact-card bg-white p-8 rounded-3xl border border-slate-100 shadow-sm reveal relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition text-6xl">⚡</div>
+                    <div class="fact-icon-wrapper w-16 h-16 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                        <i class="fact-icon fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Evasion Tactics</h3>
+                    <p class="text-slate-600 leading-relaxed">They are master climbers and incredibly fast runners, capable of <span class="highlight">leaping up to 10 feet</span> to effortlessly escape predators.</p>
+                </div>
+
+                <!-- Fact 8 -->
+                <div class="fact-card bg-white p-8 rounded-3xl border border-slate-100 shadow-sm reveal relative overflow-hidden group" style="transition-delay: 100ms;">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition text-6xl">🍼</div>
+                    <div class="fact-icon-wrapper w-16 h-16 bg-pink-50 text-pink-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                        <i class="fact-icon fa-solid fa-baby"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Baby Squirrels</h3>
+                    <p class="text-slate-600 leading-relaxed">Called <span class="highlight">pups or kittens</span>, they are born blind and hairless. They stay safely in the nest for about 10 weeks with their mother.</p>
+                </div>
+
+                <!-- Fact 9 -->
+                <div class="fact-card bg-white p-8 rounded-3xl border border-slate-100 shadow-sm reveal relative overflow-hidden group" style="transition-delay: 100ms;">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition text-6xl">🌱</div>
+                    <div class="fact-icon-wrapper w-16 h-16 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                        <i class="fact-icon fa-solid fa-seedling"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Nature's Gardeners</h3>
+                    <p class="text-slate-600 leading-relaxed">Why are they important? Because they forget where they buried seeds, they accidentally <span class="highlight">plant thousands</span> of new trees!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Protection Guidelines (Timeline/Accordion UI) -->
+    <section class="py-24 px-6 bg-white relative">
+        <!-- Decorative bg -->
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-b from-green-50/50 to-transparent rounded-l-[10rem] opacity-50 pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="flex flex-col lg:flex-row gap-16">
+                
+                <!-- Left Sidebar -->
+                <div class="lg:w-2/5 reveal">
+                    <div class="sticky top-32">
+                        <span class="text-orange-500 font-bold tracking-widest uppercase text-sm mb-2 block">Action Plan</span>
+                        <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">How to Protect <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-800">Our Squirrels?</span></h2>
+                        <p class="text-slate-600 text-lg mb-8 leading-relaxed">By following these simple steps, you can help keep squirrels safe, happy, and thriving in our Wah Yan community! 🐿️</p>
+                        
+                        <div class="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+                            <div class="flex items-start space-x-4">
+                                <div class="mt-1">
+                                    <span class="relative flex h-4 w-4">
+                                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                                      <span class="relative inline-flex rounded-full h-4 w-4 bg-yellow-500"></span>
+                                    </span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 mb-1 text-lg">Crucial Rule</h4>
+                                    <p class="text-sm text-slate-600 leading-relaxed">If you ever see an injured or distressed squirrel, do not touch it. Tell an adult or contact a wildlife rescue team immediately.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Accordion Timeline -->
+                <div class="lg:w-3/5 relative reveal" style="transition-delay: 200ms;">
+                    <!-- Vertical Timeline Line -->
+                    <div class="absolute left-8 top-8 bottom-8 w-0.5 bg-slate-200 z-0 hidden md:block"></div>
+
+                    <div class="space-y-4 relative z-10">
+                        <!-- Item 1 -->
+                        <div class="accordion-item bg-white border border-slate-200 rounded-2xl shadow-sm p-2 md:pl-2">
+                            <button class="accordion-button w-full flex items-center justify-between p-4 focus:outline-none" onclick="toggleAccordion(this)">
+                                <div class="flex items-center space-x-4 md:space-x-6">
+                                    <div class="num-circle w-12 h-12 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center font-black text-xl transition-all duration-300 z-10 border-4 border-white">1</div>
+                                    <h3 class="font-bold text-xl text-slate-800 text-left">Take Care of Their Homes</h3>
+                                </div>
+                                <i class="fa-solid fa-circle-chevron-down accordion-icon text-2xl text-slate-300"></i>
+                            </button>
+                            <div class="accordion-content px-6 md:px-24 text-slate-600">
+                                <div class="border-l-2 border-green-200 pl-4 py-2 mb-4 space-y-3">
+                                    <p><span class="font-bold text-slate-800"><i class="fa-solid fa-tree text-green-500 mr-2"></i> Save Nature Areas:</span> Help keep forests, school gardens, and parks safe and clean.</p>
+                                    <p><span class="font-bold text-slate-800"><i class="fa-solid fa-route text-green-500 mr-2"></i> Create Safe Paths:</span> Support maintaining canopy bridges or uninterrupted branches so they can travel off the ground.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="accordion-item bg-white border border-slate-200 rounded-2xl shadow-sm p-2 md:pl-2">
+                            <button class="accordion-button w-full flex items-center justify-between p-4 focus:outline-none" onclick="toggleAccordion(this)">
+                                <div class="flex items-center space-x-4 md:space-x-6">
+                                    <div class="num-circle w-12 h-12 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center font-black text-xl transition-all duration-300 z-10 border-4 border-white">2</div>
+                                    <h3 class="font-bold text-xl text-slate-800 text-left">Be Careful Around Them</h3>
+                                </div>
+                                <i class="fa-solid fa-circle-chevron-down accordion-icon text-2xl text-slate-300"></i>
+                            </button>
+                            <div class="accordion-content px-6 md:px-24 text-slate-600">
+                                <div class="border-l-2 border-green-200 pl-4 py-2 mb-4 space-y-3">
+                                    <p><span class="font-bold text-slate-800"><i class="fa-solid fa-spray-can-sparkles text-red-400 mr-2"></i> Avoid Chemicals:</span> Refrain from using pesticides and weed-killers that poison their food sources.</p>
+                                    <p><span class="font-bold text-slate-800"><i class="fa-solid fa-trash-can text-slate-400 mr-2"></i> Manage Trash Safely:</span> Keep garbage bins tightly covered so squirrels don't ingest plastics or harmful waste.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="accordion-item bg-white border border-slate-200 rounded-2xl shadow-sm p-2 md:pl-2">
+                            <button class="accordion-button w-full flex items-center justify-between p-4 focus:outline-none" onclick="toggleAccordion(this)">
+                                <div class="flex items-center space-x-4 md:space-x-6">
+                                    <div class="num-circle w-12 h-12 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center font-black text-xl transition-all duration-300 z-10 border-4 border-white">3</div>
+                                    <h3 class="font-bold text-xl text-slate-800 text-left">Educate and Feed Wisely</h3>
+                                </div>
+                                <i class="fa-solid fa-circle-chevron-down accordion-icon text-2xl text-slate-300"></i>
+                            </button>
+                            <div class="accordion-content px-6 md:px-24 text-slate-600">
+                                <div class="border-l-2 border-green-200 pl-4 py-2 mb-4 space-y-3">
+                                    <p><span class="font-bold text-slate-800"><i class="fa-solid fa-users text-blue-500 mr-2"></i> Share Knowledge:</span> Tell friends why squirrels are vital "nature's gardeners" to stop them from being treated as pests.</p>
+                                    <p><span class="font-bold text-slate-800"><i class="fa-solid fa-apple-whole text-red-500 mr-2"></i> Feed Them Wisely:</span> If permitted, offer safe, natural foods like plain, unsalted nuts or cut fruit. Never give them processed human junk food.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="accordion-item bg-white border border-slate-200 rounded-2xl shadow-sm p-2 md:pl-2">
+                            <button class="accordion-button w-full flex items-center justify-between p-4 focus:outline-none" onclick="toggleAccordion(this)">
+                                <div class="flex items-center space-x-4 md:space-x-6">
+                                    <div class="num-circle w-12 h-12 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center font-black text-xl transition-all duration-300 z-10 border-4 border-white">4</div>
+                                    <h3 class="font-bold text-xl text-slate-800 text-left">Help Wildlife Groups</h3>
+                                </div>
+                                <i class="fa-solid fa-circle-chevron-down accordion-icon text-2xl text-slate-300"></i>
+                            </button>
+                            <div class="accordion-content px-6 md:px-24 text-slate-600">
+                                <div class="border-l-2 border-green-200 pl-4 py-2 mb-4 space-y-3">
+                                    <p><span class="font-bold text-slate-800"><i class="fa-solid fa-hand-holding-heart text-pink-500 mr-2"></i> Volunteer:</span> Offer your time to local conservation groups or our school's Protection Work Team.</p>
+                                    <p><span class="font-bold text-slate-800"><i class="fa-solid fa-circle-dollar-to-slot text-green-600 mr-2"></i> Support:</span> If you can, donate supplies or funds to local animal rehabilitators.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 5 -->
+                        <div class="accordion-item bg-white border border-slate-200 rounded-2xl shadow-sm p-2 md:pl-2">
+                            <button class="accordion-button w-full flex items-center justify-between p-4 focus:outline-none" onclick="toggleAccordion(this)">
+                                <div class="flex items-center space-x-4 md:space-x-6">
+                                    <div class="num-circle w-12 h-12 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center font-black text-xl transition-all duration-300 z-10 border-4 border-white">5</div>
+                                    <h3 class="font-bold text-xl text-slate-800 text-left">Build Safe Nests</h3>
+                                </div>
+                                <i class="fa-solid fa-circle-chevron-down accordion-icon text-2xl text-slate-300"></i>
+                            </button>
+                            <div class="accordion-content px-6 md:px-24 text-slate-600">
+                                <div class="border-l-2 border-green-200 pl-4 py-2 mb-4 space-y-3">
+                                    <p><span class="font-bold text-slate-800"><i class="fa-solid fa-hammer text-orange-600 mr-2"></i> Make Nest Boxes:</span> Build properly sized wooden boxes to give them shelter during harsh weather.</p>
+                                    <p><span class="font-bold text-slate-800"><i class="fa-solid fa-broom text-yellow-600 mr-2"></i> Maintenance:</span> Keep these artificial boxes clean and positioned high enough to be safe from predators.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 6 -->
+                        <div class="accordion-item bg-white border border-slate-200 rounded-2xl shadow-sm p-2 md:pl-2">
+                            <button class="accordion-button w-full flex items-center justify-between p-4 focus:outline-none" onclick="toggleAccordion(this)">
+                                <div class="flex items-center space-x-4 md:space-x-6">
+                                    <div class="num-circle w-12 h-12 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center font-black text-xl transition-all duration-300 z-10 border-4 border-white">6</div>
+                                    <h3 class="font-bold text-xl text-slate-800 text-left">Look After Pets</h3>
+                                </div>
+                                <i class="fa-solid fa-circle-chevron-down accordion-icon text-2xl text-slate-300"></i>
+                            </button>
+                            <div class="accordion-content px-6 md:px-24 text-slate-600">
+                                <div class="border-l-2 border-green-200 pl-4 py-2 mb-4 space-y-3">
+                                    <p><span class="font-bold text-slate-800"><i class="fa-solid fa-dog text-orange-400 mr-2"></i> Keep Pets on Leashes:</span> Don't let domestic dogs or cats chase squirrels; it causes severe stress and injury.</p>
+                                    <p><span class="font-bold text-slate-800"><i class="fa-solid fa-bell text-yellow-500 mr-2"></i> Cat Bells:</span> If you have outdoor cats, put a bell on their collar to warn wildlife.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Squirrel Knowledge Quiz Section -->
+    <section class="py-24 px-6 bg-[#fff7ed] relative" id="knowledge-quiz">
+        <!-- Background decorative pattern -->
+        <div class="absolute inset-0 opacity-[0.05]" style="background-image: radial-gradient(#f97316 2px, transparent 2px); background-size: 30px 30px;"></div>
+
+        <div class="max-w-3xl mx-auto relative z-10">
+            <div class="text-center mb-12 reveal">
+                <div class="inline-block p-4 bg-orange-100 rounded-full text-orange-500 mb-4 animate-bounce">
+                    <i class="fa-solid fa-gamepad text-3xl"></i>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-slate-900">Test Your Knowledge 🎓</h2>
+                <div class="w-24 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
+                <p class="mt-4 text-slate-600 text-lg">Let's see how much you've learned about our little friends!</p>
+            </div>
+
+            <div class="bg-white rounded-[2rem] shadow-[0_20px_50px_rgba(249,115,22,0.1)] p-8 md:p-12 border border-orange-100 reveal relative overflow-hidden" id="quiz-container">
+                <!-- Quiz content gets injected here by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Unified with index.html) -->
+    <footer class="bg-slate-900 text-slate-400 py-16 px-6 relative z-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 items-center">
+            <div class="space-y-4">
+                <div class="flex items-center space-x-2 text-white group cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-8 h-8 bg-green-800 rounded-lg flex items-center justify-center">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <span class="text-xl font-bold tracking-tighter">WYSPWT</span>
+                </div>
+                <p class="text-sm text-slate-500">Wah Yan Squirrel Protection Work Team <br> Harmonizing nature and education.</p>
+            </div>
+            
+            <div class="text-center md:text-left">
+                <p class="font-bold text-white mb-4 uppercase tracking-widest text-xs">Contact Lead</p>
+                <a href="mailto:s24253@wahyan.edu.hk" class="inline-flex items-center space-x-2 hover:text-white transition group">
+                    <i class="fa-regular fa-envelope group-hover:animate-bounce"></i>
+                    <span>s24253@wahyan.edu.hk (Marcus Ho)</span>
+                </a>
+            </div>
+
+            <div class="flex justify-start md:justify-end space-x-4">
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-green-800 hover:text-white transition transform hover:-translate-y-1"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-green-800 hover:text-white transition transform hover:-translate-y-1"><i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-800 text-sm text-center md:text-left flex flex-col md:flex-row justify-between items-center">
+            <p>&copy; 2025 Wah Yan College, Hong Kong. F.3K GP1.</p>
+            <p class="mt-2 md:mt-0 opacity-50 font-mono text-xs">v2.0.FANCY</p>
+        </div>
+    </footer>
+
+    <!-- Single Unified JS File -->
+    <script src="js/main.js"></script>
+</body>
+</html>
