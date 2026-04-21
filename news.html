@@ -17,6 +17,7 @@
     <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 glass-nav transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Updated the div to an "a" tag so clicking the logo goes home -->
             <a href="index.html" class="flex items-center space-x-2 group cursor-pointer">
                 <div class="w-10 h-10 bg-green-800 rounded-xl flex items-center justify-center text-white transform group-hover:rotate-12 transition-transform shadow-lg">
                     <i class="fa-solid fa-leaf"></i>
@@ -33,7 +34,7 @@
                 <a href="news.html" class="nav-link relative hover:text-green-700 transition py-2">Photos & News</a>
             </div>
 
-            <button class="md:hidden text-2xl hover:text-green-700" id="menuBtn">
+            <button class="md:hidden text-2xl hover:text-green-700 transition transform hover:scale-110" id="menuBtn">
                 <i class="fa-solid fa-bars-staggered"></i>
             </button>
         </div>
@@ -207,6 +208,7 @@
     </footer>
 
     <!-- Animations Script -->
+     <script src="js/main.js"></script>
     <script>
         const reveals = document.querySelectorAll('.reveal');
         const scrollHandler = () => {
